@@ -2,13 +2,10 @@
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: #e9eeee;
-}
-main{
+.counter{
     position: relative;
-    margin-top: 15%;
-    margin-left: 45%;
+    margin-top: 3%;
+    margin-left: 10%;
 }
 #heading{
     font-size:3em;
@@ -57,7 +54,7 @@ main{
     color: #fff;
 }
 @media screen and (max-width:600px){
-    main{
+    .counter{
         margin-left: 40%;
     }
     #heading{
@@ -75,7 +72,7 @@ main{
     }
 }
 
-@media screen and (min-width:600px){
+@media screen and (min-width:1200px){
     #heading{
         margin-left: -30px;
     }
