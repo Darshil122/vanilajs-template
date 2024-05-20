@@ -2,10 +2,50 @@
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+	color: black;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.navbar{
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+    padding-top: 1rem;
+	/* margin-top: 30px; */
+    background-color: cornflowerblue;
+}
+
+.icon{
+    margin-left: 89%;
+	cursor: pointer;
+    height: 30px;
+}
+
+.nav-menu{
+    position: fixed;
+	width: 100%;
+	top: 2.5rem;
+    background-color: cornflowerblue;
+	font-weight: bold;
+
+}
+.nav-menu a{
+	display: block;
+	text-align: center;
+	padding: 5px 10px;
+}
+.hide{
+	display: none;
+}
+
+
 .counter{
     position: relative;
     margin-left: 45%;
     margin-top: 18%;
+    display: none;
 }
 #heading{
     font-size:3em;
@@ -53,27 +93,34 @@
     background-color: black;
     color: #fff;
 }
-@media screen and (max-width:600px){
-    .counter{
-        margin-left: 40%;
-        margin-top: 18%;
-    }
-    #heading{
-        margin-left: -40px;
-    }
-    .decrease, .increase, .reset{
-        width: 100px;
-        letter-spacing: 1px;
-    }
-    #btn{
-        margin-left: -100px;
-    }
-    #value{
-        margin-left: 50px;
-    }
-}
+
 
 @media screen and (min-width:600px){
+    .navbar{
+		justify-content: space-around;
+        padding-top: 10px;
+        margin: 0px;
+	}
+	.nav-menu{
+		display: block;
+		position: static;
+		width: auto;
+        align-items: center;
+		margin-right:20px;
+	}
+	.nav-menu a{
+        padding-top: 0px;
+        display: inline-block;
+        margin-top: 0px;
+
+	}
+	.icon{
+		display: none;
+        margin-left: 150px;
+        margin-top: 100px;	
+    }
+    
+    
     .counter{
         margin-left: 45%;
         margin-top: 18%;
@@ -84,6 +131,26 @@
     .decrease, .increase, .reset{
         width: 120px;
         letter-spacing: 3px;
+    }
+    #btn{
+        margin-left: -100px;
+    }
+    #value{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .counter{
+        margin-left: 40%;
+        margin-top: 50%;
+    }
+    #heading{
+        margin-left: -40px;
+    }
+    .decrease, .increase, .reset{
+        width: 100px;
+        letter-spacing: 1px;
     }
     #btn{
         margin-left: -100px;
