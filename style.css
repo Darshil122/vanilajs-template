@@ -2,22 +2,19 @@
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: #e9eeee;
-}
-main{
+.counter{
     position: relative;
-    margin-top: 15%;
-    margin-left: 45%;
+    margin-top: 3%;
+    margin-left: 10%;
 }
-h1{
+#heading{
     font-size:3em;
     letter-spacing: 3px;
     margin-bottom: 20px;
 }
 #value{
     font-size:4em;  
-    margin-left: 9%;
+    margin-left: 80px;
     font-weight: bold;
 }
 #btn{
@@ -29,7 +26,7 @@ h1{
     background-color: #e9eeee;
     border-color: black;
     height: 30px;
-    width: 12%;
+    width: 130px;
     border-radius: 10px;
     letter-spacing: 3px;
     font-weight: bold;
@@ -38,7 +35,7 @@ h1{
     background-color: #e9eeee;
     border-color: black;
     height: 30px;
-    width: 12%;
+    width: 130px;
     border-radius: 10px;
     letter-spacing: 3px;
     font-weight: bold;
@@ -47,7 +44,7 @@ h1{
     background-color: #e9eeee;
     border-color: black;
     height: 30px;
-    width: 12%;
+    width: 130px;
     border-radius: 10px;
     letter-spacing: 3px;
     font-weight: bold;
@@ -55,4 +52,38 @@ h1{
 .b:hover{
     background-color: black;
     color: #fff;
+}
+@media screen and (max-width:600px){
+    .counter{
+        margin-left: 40%;
+    }
+    #heading{
+        margin-left: -40px;
+    }
+    .decrease, .increase, .reset{
+        width: 100px;
+        letter-spacing: 1px;
+    }
+    #btn{
+        margin-left: -100px;
+    }
+    #value{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    #heading{
+        margin-left: -30px;
+    }
+    .decrease, .increase, .reset{
+        width: 120px;
+        letter-spacing: 3px;
+    }
+    #btn{
+        margin-left: -100px;
+    }
+    #value{
+        margin-left: 50px;
+    }
 }
