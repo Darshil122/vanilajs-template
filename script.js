@@ -23,6 +23,7 @@ modal.onclick = function(){
 review.onclick = function(){
     showCounter.style.display = "none";
 }
+
 toggle.addEventListener('click', () => {
 navMenu.classList.toggle('hide');
 });
