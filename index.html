@@ -7,25 +7,26 @@
     <title>vanilaJs Template</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
-		<nav class="navbar">
-			<div class="icon">
+        <nav class="navbar">
+            <div class="icon">
                 <i class="fa-solid fa-bars"></i>
-			</div>
-			<div class="nav-menu hide">
-				<a href="#" id="home">Home</a>
-				<a href="#" id="counter">Counter</a>
-				<a href="#" id="modal">Bootstrap Modal</a>
-				<a href="#" id="review">Review</a>
-			</div>
-		</nav>
-	</header>
+            </div>
+            <div class="nav-menu hide">
+                <a href="#" id="home">Home</a>
+                <a href="#" id="counter">Counter</a>
+                <a href="#" id="showModal">Bootstrap Modal</a>
+                <a href="#" id="review">Review</a>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Counter -->
     <div class="counter" id="showCounter">
         <h1 id="heading">Counter</h1>
         <span id="value">0</span>
@@ -35,6 +36,47 @@
             <button class="increase b">INCREASE</button>
         </div>
     </div>
+
+    <!-- Bootstrap modal -->
+    <div id="box">
+        <button id="myBtn">Open Modal</button>
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <span id="close">&times;</span>
+                <p>Welcome To Modal..</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Review Box -->
+    <div id="showReview">
+        <div class="head">
+            <h2>Our Reviews</h2>
+            <div class="underline"></div>
+        </div>
+        <section class="box">
+            <img id="img"
+                src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="" srcset="">
+            <h3 id="author">John Doe</h3>
+            <p id="job">Devloper</p>
+            <p id="info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi vel doloribus quasi dolor quam
+                asperiores
+                molestiae officia neque. Ipsa ducimus veritatis hic at necessitatibus maxime amet laboriosam, dolor
+                minus,
+                atque placeat. Velit facilis doloremque hic recusandae.</p>
+
+            <div class="btn">
+                <button class="pre-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
