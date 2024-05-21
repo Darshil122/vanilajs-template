@@ -13,7 +13,6 @@ a{
 	justify-content: space-between;
 	align-items: center;
     padding-top: 1rem;
-	/* margin-top: 30px; */
     background-color: cornflowerblue;
 }
 
@@ -94,6 +93,126 @@ a{
     color: #fff;
 }
 
+#box{
+    height: 300px;
+    width: 450px;
+    background-color: azure;
+    border-radius: 20px;
+    position: relative;
+    margin-left: 35%;
+    margin-top: 20%;
+    box-shadow: 0px 0px 10px black;
+    background-image: linear-gradient(170deg, red, blue);
+    display: none;
+}
+#myBtn{
+    position: relative;
+    top: 45%;
+    left: 40%;
+    background-color:darkorange;
+    border:none;
+    border-radius: 20px;
+    width: 20%;
+    height: 30px;
+    color: #fff;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 250px;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+.modal-content {
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+width: 30%;
+}
+#close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+#close:hover,
+#close:focus {
+color: #000;
+text-decoration: none;  
+cursor: pointer;
+}
+
+#showReview{
+    display: none;
+    /* margin-top: -50px; */
+}
+.head{
+    position: relative;
+    top: 150px;
+    margin-left: 46%;
+    color: rgb(44, 46, 82);
+    letter-spacing: 2px;
+}
+.underline{
+    width: 3rem;
+    margin-left: 50px;
+    height: 2px;
+    background-color: dodgerblue;
+    border-radius: 20px;
+}
+.box{
+    position: relative;
+    top: 180px;
+    left: 35%;
+    height: 350px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px black;
+    background-color: rgb(232, 237, 237);
+}
+#img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    left: 40%;
+    box-shadow: 5px -3px dodgerblue;
+    border-radius: 50%;
+}
+#author{
+    padding-top: 20px;
+    margin-left: 43%;
+    letter-spacing: 1px;
+}
+#job{
+    margin-left: 45%;
+    color: rgb(31, 168, 231);
+}
+#info{
+    padding-top: 20px;
+    margin-left: 10px;
+}
+.btn{
+    margin-left: 45%;
+    margin-top: 20px;
+}
+.pre-btn{
+    color: dodgerblue;
+    background-color: rgb(232, 237, 237);
+    margin-right: 30px;
+    border: none;
+}
+.next-btn{
+    color: dodgerblue;
+    background-color: rgb(232, 237, 237);
+    border: none;
+}
+
 
 @media screen and (min-width:600px){
     .navbar{
@@ -136,9 +255,26 @@ a{
     #value{
         margin-left: 50px;
     }
+
+    #box{
+        margin-left: 35%;
+        margin-top: 15%;
+        width: 400px;
+    }
+    .head{
+        margin-left: 40%;
+    }
+    .box{
+        left: 30%;
+    }
+    
+
 }
 
 @media screen and (max-width:600px){
+    .icon{
+        width: 100%;
+    }
     .counter{
         margin-left: 40%;
         margin-top: 50%;
@@ -155,5 +291,26 @@ a{
     }
     #value{
         margin-left: 50px;
+    }
+
+    #box{
+        margin-left: 15%;
+        margin-top: 50%;
+        width: 300px;
+        height: 250px;
+    }
+    #myBtn{
+        width: 35%;
+        margin-left: -5%;
+    }
+    .head{
+        margin-left: 35%;
+        top: 200px;
+    }
+    .box{
+        top: 240px;
+        left: 15%;
+        width: 350px;
+        height: 350px;
     }
 }
