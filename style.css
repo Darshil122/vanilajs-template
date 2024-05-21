@@ -100,8 +100,8 @@ a{
     background-color: azure;
     border-radius: 20px;
     position: relative;
-    top: 25vmin;
-    left: 35%;
+    margin-left: 35%;
+    margin-top: 20%;
     box-shadow: 0px 0px 10px black;
     background-image: linear-gradient(170deg, red, blue);
     display: none;
@@ -190,6 +190,11 @@ cursor: pointer;
     }
     #value{
         margin-left: 50px;
+    }
+
+    #box{
+        margin-left: 35%;
+        margin-top: 20%;
     }
 }
 
