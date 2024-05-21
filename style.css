@@ -94,6 +94,61 @@ a{
     color: #fff;
 }
 
+#box{
+    height: 300px;
+    width: 450px;
+    background-color: azure;
+    border-radius: 20px;
+    position: relative;
+    top: 25vmin;
+    left: 35%;
+    box-shadow: 0px 0px 10px black;
+    background-image: linear-gradient(170deg, red, blue);
+    display: none;
+}
+#myBtn{
+    position: relative;
+    top: 45%;
+    left: 40%;
+    background-color:darkorange;
+    border:none;
+    border-radius: 20px;
+    width: 20%;
+    height: 30px;
+    color: #fff;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 250px;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+.modal-content {
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+width: 30%;
+}
+
+#close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+color: #000;
+text-decoration: none;  
+cursor: pointer;
+}
 
 @media screen and (min-width:600px){
     .navbar{
