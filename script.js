@@ -23,6 +23,7 @@ counter.onclick = function(){
 }
 home.onclick = function(){
     showCounter.style.display = "none";
+    mymodal.style.display = "none";
 }
 showModal.onclick = function(){
     showCounter.style.display = "none";

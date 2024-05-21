@@ -193,9 +193,12 @@ cursor: pointer;
     }
 
     #box{
-        margin-left: 35%;
-        margin-top: 20%;
+        margin-left: 30%;
+        margin-top: 15%;
+        display: none;
+        width: 400px;
     }
+
 }
 
 @media screen and (max-width:600px){
@@ -215,5 +218,16 @@ cursor: pointer;
     }
     #value{
         margin-left: 50px;
+    }
+
+    #box{
+        margin-left: 15%;
+        margin-top: 50%;
+        width: 300px;
+        height: 250px;
+    }
+    #myBtn{
+        width: 35%;
+        margin-left: -5%;
     }
 }
