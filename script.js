@@ -1,3 +1,5 @@
+let currentItem = 0;
+
 const img = document.getElementById("img");
 const author = document.getElementById("author");
 const job = document.getElementById("job");
@@ -6,13 +8,11 @@ const info = document.getElementById("info");
 const preBtn = document.querySelector(".pre-btn");
 const nextBtn = document.querySelector(".next-btn");
 
-let currentItem = 0;
-
-
 let count = 0;
 
 const value = document.querySelector("#value");
 const btns = document.querySelectorAll(".b");
+
 const toggle = document.querySelector('.icon');
 const navMenu = document.querySelector('.nav-menu');
 
