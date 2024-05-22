@@ -267,6 +267,11 @@ cursor: pointer;
     .box{
         left: 30%;
     }
+    #showHome{
+        align-items: center;
+        margin-left: 20%;
+        margin-top: 10%;
+    }
     
 
 }
@@ -312,5 +317,10 @@ cursor: pointer;
         left: 15%;
         width: 350px;
         height: 350px;
+    }
+    #showHome{
+        margin-top: 30%;
+        margin-left: 15%;
+        padding-top: 10%;
     }
 }

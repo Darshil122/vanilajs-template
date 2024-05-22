@@ -20,34 +20,39 @@ let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");
 let span = document.getElementById("close");
 
-let home = document.getElementById("home");
-let counter = document.getElementById("counter");
-let showModal = document.getElementById("showModal");
-let googleReview = document.getElementById("review");
+let home = document.querySelector("#home");
+let counter = document.querySelector("#counter");
+let showModal = document.querySelector("#showModal");
+let googleReview = document.querySelector("#review");
 
 let showCounter = document.getElementById("showCounter");
 let mymodal = document.getElementById("box");
 let showReview = document.getElementById("showReview");
+let showHome = document.getElementById("showHome");
 
-counter.onclick = function(){
+home.onclick = function(){
+    showHome.style.display = "block";
+    showCounter.style.display = "none";
     mymodal.style.display = "none";
-    showCounter.style.display = "block";
     showReview.style.display = "none";
 }
-home.onclick = function(){
-    showCounter.style.display = "none";
+counter.onclick = function(){
+    showCounter.style.display = "block";
+    showHome.style.display = "none";
     mymodal.style.display = "none";
     showReview.style.display = "none";
 }
 showModal.onclick = function(){
-    showCounter.style.display = "none";
     mymodal.style.display = "block";
+    showHome.style.display = "none";
+    showCounter.style.display = "none";
     showReview.style.display = "none";
 }
 googleReview.onclick = function(){
+    showReview.style.display = "block";
+    showHome.style.display = "none";
     showCounter.style.display = "none";
     mymodal.style.display = "none";
-    showReview.style.display = "block";
 
 }
 
