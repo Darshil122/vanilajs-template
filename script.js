@@ -56,6 +56,22 @@ googleReview.onclick = function(){
 
 }
 
+// var btnContainer = document.getElementById("myDIV");
+
+// Get all buttons with class="btn" inside the container
+let menu = document.querySelectorAll(".menu");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < menu.length; i++) {
+  menu[i].addEventListener("click", function() {
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+
 toggle.addEventListener('click', () => {
 navMenu.classList.toggle('hide');
 });
@@ -92,11 +108,11 @@ span.onclick = function () {
     modal.style.display = "none";
 }
 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// window.onclick = function (event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
 
 // Review
 const review = [{

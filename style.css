@@ -14,10 +14,13 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     background-color: cornflowerblue;
 }
-
+.active{
+    background-color:burlywood;
+    color: white;
+}
 .icon {
     margin-left: 89%;
     cursor: pointer;
@@ -104,14 +107,11 @@ a {
 }
 
 #box {
-    height: 300px;
+    position: relative;
     width: 450px;
-    background-color: azure;
+    height: 300px;
     border-radius: 20px;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 5px 5px 10px black;
     background-image: linear-gradient(170deg, red, blue);
     display: none;
 }
@@ -127,26 +127,18 @@ a {
     width: 35%;
     height: 30px;
     color: #fff;
+    cursor: pointer;
 }
-
-.modal {
+.modal{
     display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 250px;
-    left: 0%;
-    top: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-
 }
 
 .modal-content {
     background-color: #fefefe;
     margin: auto;
+    margin-top: 10%;
     padding: 20px;
-    width: 30%;
+    width: 60%;
 }
 
 #close {
@@ -179,9 +171,9 @@ a {
 }
 
 .underline {
-    width: 3rem;
+    width: 9.5rem;
     height: 2px;
-    margin-left: 50px;
+    margin-left: 0px;
     border-radius: 20px;
     background-color: dodgerblue;
 }
@@ -231,19 +223,23 @@ a {
     background-color: rgb(232, 237, 237);
     margin-right: 30px;
     border: none;
+    cursor: pointer;
+}
+.pre-btn:hover, .next-btn:hover{
+    color: #000;
 }
 
 .next-btn {
     color: dodgerblue;
     background-color: rgb(232, 237, 237);
     border: none;
+    cursor: pointer;
 }
 
 
 @media screen and (min-width:600px) {
     .navbar {
         justify-content: space-around;
-        padding-top: 10px;
         margin: 0px;
     }
 
@@ -310,6 +306,9 @@ a {
 }
 
 @media screen and (max-width:600px) {
+    .navbar{
+        padding-top: 10px;
+    }
     .icon {
         width: 100%;
     }
