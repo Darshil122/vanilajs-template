@@ -14,7 +14,8 @@ const value = document.querySelector("#value");
 const btns = document.querySelectorAll(".b");
 
 const toggle = document.querySelector('.icon');
-const navMenu = document.querySelector('.nav-menu');
+const navMenu = document.querySelectorAll('.nav-menu');
+
 
 let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");
@@ -24,44 +25,53 @@ let home = document.querySelector("#home");
 let counter = document.querySelector("#counter");
 let showModal = document.querySelector("#showModal");
 let googleReview = document.querySelector("#review");
+let table = document.querySelector("#table");
 
 let showCounter = document.getElementById("showCounter");
 let mymodal = document.getElementById("box");
 let showReview = document.getElementById("showReview");
 let showHome = document.getElementById("showHome");
+let showtable = document.getElementById("showTable");
 
 home.onclick = function(){
     showHome.style.display = "block";
     showCounter.style.display = "none";
     mymodal.style.display = "none";
     showReview.style.display = "none";
+    showtable.style.display = "none";
 }
 counter.onclick = function(){
     showCounter.style.display = "block";
     showHome.style.display = "none";
     mymodal.style.display = "none";
     showReview.style.display = "none";
+    showtable.style.display = "none";
 }
 showModal.onclick = function(){
     mymodal.style.display = "block";
     showHome.style.display = "none";
     showCounter.style.display = "none";
     showReview.style.display = "none";
+    showtable.style.display = "none";
 }
 googleReview.onclick = function(){
     showReview.style.display = "block";
     showHome.style.display = "none";
     showCounter.style.display = "none";
     mymodal.style.display = "none";
-
+    showtable.style.display = "none";
+}
+table.onclick = function(){
+    showHome.style.display = "none";
+    showCounter.style.display = "none";
+    mymodal.style.display = "none";
+    showReview.style.display = "none";
+    showtable.style.display = "block";
 }
 
-// var btnContainer = document.getElementById("myDIV");
 
-// Get all buttons with class="btn" inside the container
 let menu = document.querySelectorAll(".menu");
 
-// Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < menu.length; i++) {
   menu[i].addEventListener("click", function() {
     let current = document.getElementsByClassName("active");
@@ -108,11 +118,6 @@ span.onclick = function () {
     modal.style.display = "none";
 }
 
-// window.onclick = function (event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
 
 // Review
 const review = [{
@@ -165,4 +170,3 @@ preBtn.addEventListener('click', function(){
     }
     showperson();
 });
-

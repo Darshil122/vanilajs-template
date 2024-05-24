@@ -18,7 +18,7 @@ a {
     background-color: cornflowerblue;
 }
 .active{
-    background-color:burlywood;
+    background-color: #4674c9;
     color: white;
 }
 .icon {
@@ -121,30 +121,32 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: darkorange;
+    background-color: #4674c9;
     border: none;
     border-radius: 20px;
     width: 35%;
     height: 30px;
     color: #fff;
     cursor: pointer;
+    z-index: -1;
 }
 .modal{
     display: none;
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #fff;
     margin: auto;
     margin-top: 10%;
-    padding: 20px;
+    padding: 10px;
     width: 60%;
+    height: 150px;
 }
 
 #close {
     color: #aaaaaa;
     float: right;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -235,7 +237,16 @@ a {
     border: none;
     cursor: pointer;
 }
+#showTable{
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.tbl{
+    border: 1px solid black;
+}
 
 @media screen and (min-width:600px) {
     .navbar {
@@ -302,6 +313,12 @@ a {
         align-items: center;
         margin-left: 20%;
         margin-top: 10%;
+    }
+    #showTable{
+        /* display: none; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
