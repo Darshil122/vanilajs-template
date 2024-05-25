@@ -14,7 +14,7 @@ const value = document.querySelector("#value");
 const btns = document.querySelectorAll(".b");
 
 const toggle = document.querySelector('.icon');
-const navMenu = document.querySelectorAll('.nav-menu');
+const navMenu = document.querySelector('.nav-menu');
 
 
 let modal = document.getElementById("myModal");
@@ -25,49 +25,49 @@ let home = document.querySelector("#home");
 let counter = document.querySelector("#counter");
 let showModal = document.querySelector("#showModal");
 let googleReview = document.querySelector("#review");
-let table = document.querySelector("#table");
+// let table = document.querySelector("#table");
 
 let showCounter = document.getElementById("showCounter");
 let mymodal = document.getElementById("box");
 let showReview = document.getElementById("showReview");
 let showHome = document.getElementById("showHome");
-let showtable = document.getElementById("showTable");
+// let showtable = document.getElementById("showTable");
 
 home.onclick = function(){
     showHome.style.display = "block";
     showCounter.style.display = "none";
     mymodal.style.display = "none";
     showReview.style.display = "none";
-    showtable.style.display = "none";
+    // showtable.style.display = "none";
 }
 counter.onclick = function(){
     showCounter.style.display = "block";
     showHome.style.display = "none";
     mymodal.style.display = "none";
     showReview.style.display = "none";
-    showtable.style.display = "none";
+    // showtable.style.display = "none";
 }
 showModal.onclick = function(){
     mymodal.style.display = "block";
     showHome.style.display = "none";
     showCounter.style.display = "none";
     showReview.style.display = "none";
-    showtable.style.display = "none";
+    // showtable.style.display = "none";
 }
 googleReview.onclick = function(){
     showReview.style.display = "block";
     showHome.style.display = "none";
     showCounter.style.display = "none";
     mymodal.style.display = "none";
-    showtable.style.display = "none";
+    // showtable.style.display = "none";
 }
-table.onclick = function(){
-    showHome.style.display = "none";
-    showCounter.style.display = "none";
-    mymodal.style.display = "none";
-    showReview.style.display = "none";
-    showtable.style.display = "block";
-}
+// table.onclick = function(){
+//     showHome.style.display = "none";
+//     showCounter.style.display = "none";
+//     mymodal.style.display = "none";
+//     showReview.style.display = "none";
+//     showtable.style.display = "block";
+// }
 
 
 let menu = document.querySelectorAll(".menu");

@@ -240,13 +240,20 @@ a {
 #showTable{
     /* display: none; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
 }
 
 .tbl{
+    /* justify-content: center;
+    align-items: center; */
     border: 1px solid black;
 }
+/* .section{
+    display: none;
+}
+.section.live{
+    display: block;
+} */
 
 @media screen and (min-width:600px) {
     .navbar {
