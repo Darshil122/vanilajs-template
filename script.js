@@ -21,53 +21,51 @@ let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");
 let span = document.getElementById("close");
 
-let home = document.querySelector("#home");
-let counter = document.querySelector("#counter");
-let showModal = document.querySelector("#showModal");
-let googleReview = document.querySelector("#review");
-// let table = document.querySelector("#table");
+const home = document.querySelector("#home");
+const counter = document.querySelector("#counter");
+const showModal = document.querySelector("#showModal");
+const googleReview = document.querySelector("#review");
+const table = document.querySelector("#table");
 
-let showCounter = document.getElementById("showCounter");
-let mymodal = document.getElementById("box");
-let showReview = document.getElementById("showReview");
-let showHome = document.getElementById("showHome");
-// let showtable = document.getElementById("showTable");
+const showCounter = document.getElementById("showCounter");
+const mymodal = document.getElementById("box");
+const showReview = document.getElementById("showReview");
+const showHome = document.getElementById("showHome");
+const showTable = document.getElementById("showTable");
 
-home.onclick = function(){
+function hideAllExcept(section) {
+    [showHome, showCounter, mymodal, showReview, showTable].forEach((element) => {
+        if (element !== section) {
+            element.style.display = "none";
+        }
+    });
+}
+
+home.addEventListener("click", function() {
     showHome.style.display = "block";
-    showCounter.style.display = "none";
-    mymodal.style.display = "none";
-    showReview.style.display = "none";
-    // showtable.style.display = "none";
-}
-counter.onclick = function(){
+    hideAllExcept(showHome);
+});
+
+counter.addEventListener("click", function() {
     showCounter.style.display = "block";
-    showHome.style.display = "none";
-    mymodal.style.display = "none";
-    showReview.style.display = "none";
-    // showtable.style.display = "none";
-}
-showModal.onclick = function(){
+    hideAllExcept(showCounter);
+});
+
+showModal.addEventListener("click", function() {
     mymodal.style.display = "block";
-    showHome.style.display = "none";
-    showCounter.style.display = "none";
-    showReview.style.display = "none";
-    // showtable.style.display = "none";
-}
-googleReview.onclick = function(){
+    hideAllExcept(mymodal);
+});
+
+googleReview.addEventListener("click", function() {
     showReview.style.display = "block";
-    showHome.style.display = "none";
-    showCounter.style.display = "none";
-    mymodal.style.display = "none";
-    // showtable.style.display = "none";
-}
-// table.onclick = function(){
-//     showHome.style.display = "none";
-//     showCounter.style.display = "none";
-//     mymodal.style.display = "none";
-//     showReview.style.display = "none";
-//     showtable.style.display = "block";
-// }
+    hideAllExcept(showReview);
+});
+
+table.addEventListener('click', function(){
+    showTable.style.display = "block";
+    hideAllExcept(showTable);
+});
+
 
 
 let menu = document.querySelectorAll(".menu");
