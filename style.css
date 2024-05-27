@@ -255,6 +255,9 @@ th{
     border: 2px solid black;
     height: 50px;
 }
+#showForm{
+    display: none;
+}
 
 
 @media screen and (min-width:600px) {
@@ -323,6 +326,53 @@ th{
         margin-left: 20%;
         margin-top: 10%;
     }
+    
+    .std{
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    .form-control{
+        padding:5px 15px;
+        margin: 15px 10px 0 5px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px black;
+        cursor:text;
+    }
+
+    .radiobtn{
+        cursor: pointer;
+        margin: 0 0 0 15px;
+        width: 20px;
+    }
+
+    .stdhead{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .stdtbl{
+        position: absolute;
+        top: 60%;
+        width: 50%;
+        left: 25%;
+        border: 2px solid black;
+    }
+    .submitbtn{
+        background-color: #5188ee;
+        color: #fff;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 5px;
+        margin-left: 35%;
+        cursor: pointer;
+    }
+
 }
 
 @media screen and (max-width:600px) {

@@ -26,15 +26,17 @@ const counter = document.querySelector("#counter");
 const showModal = document.querySelector("#showModal");
 const googleReview = document.querySelector("#review");
 const table = document.querySelector("#table");
+const form = document.querySelector("#form");
 
 const showCounter = document.getElementById("showCounter");
 const mymodal = document.getElementById("box");
 const showReview = document.getElementById("showReview");
 const showHome = document.getElementById("showHome");
 const showTable = document.getElementById("showTable");
+const showForm = document.getElementById("showForm");
 
 function hideAllExcept(section) {
-    [showHome, showCounter, mymodal, showReview, showTable].forEach((element) => {
+    [showHome, showCounter, mymodal, showReview, showTable, showForm].forEach((element) => {
         if (element !== section) {
             element.style.display = "none";
         }
@@ -66,7 +68,10 @@ table.addEventListener('click', function(){
     hideAllExcept(showTable);
 });
 
-
+form.addEventListener('click', function(){
+    showForm.style.display = "block";
+    hideAllExcept(showForm);
+});
 
 let menu = document.querySelectorAll(".menu");
 
@@ -168,3 +173,47 @@ preBtn.addEventListener('click', function(){
     }
     showperson();
 });
+
+
+let selectedrow = null;
+function onFormSubmit(){
+    event.preventDefault();
+    let formData = readFormData();
+    if(selectedrow === null){
+        insertNewRecord(formData);
+    }else{
+
+    }
+}
+
+function readFormData(){
+    let formData = {};
+    formData["fname"] = document.getElementById("fname").value;
+    formData["lname"] = document.getElementById("lname").value;
+    formData["male"] = document.getElementById("male").value;
+    formData["female"] = document.getElementById("female").value;
+    formData["number"] = document.getElementById("number").value;
+    formData["email"] = document.getElementById("email").value;
+    return formData;
+}
+
+function insertNewRecord(data){
+    let table = document.getElementById("stdDetail").getElementsByTagName('td')[0];
+    let newRow = table.insertRow(table.length);
+
+    let row1 = newRow.insertCell(0);
+        row1.innerHTML = data.fname;
+    let row2 = newRow.insertCell(1);
+        row2.innerHTML = data.lname;
+    let row3 = newRow.insertCell(2);
+        row3.innerHTML = data.male;
+    let row4 = newRow.insertCell(3);
+        row4.innerHTML = data.female;
+    let row5 = newRow.insertCell(4);
+        row5.innerHTML = data.number;
+    let row6 = newRow.insertCell(5);
+        row6.innerHTML = data.email;
+    // let row7 = newRow.insertCell(6);
+    //     row7.innerHTML = '<button>Edit</button> <button>Delete</button>';
+
+}

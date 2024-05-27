@@ -23,6 +23,7 @@
                 <a href="#" id="showModal" class="menu">Modal</a>
                 <a href="#" id="review" class="menu">Review</a>
                 <a href="#" id="table" class="menu">Table</a>
+                <a href="#" id="form" class="menu">Form</a>
             </div>
         </nav>
         <main id="showHome">
@@ -91,39 +92,82 @@
                 <th>Age</th>
                 <th>Email</th>
             </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>20</td>
-                    <td>johndoe@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>Alice</td>
-                    <td>Doe</td>
-                    <td>20</td>
-                    <td>johndoe@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>Alice</td>
-                    <td>Doe</td>
-                    <td>20</td>
-                    <td>johndoe@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>Alice</td>
-                    <td>Doe</td>
-                    <td>20</td>
-                    <td>johndoe@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>Alice</td>
-                    <td>Doe</td>
-                    <td>20</td>
-                    <td>johndoe@gmail.com</td>
-                </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>20</td>
+                <td>johndoe@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>Doe</td>
+                <td>20</td>
+                <td>johndoe@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>Doe</td>
+                <td>20</td>
+                <td>johndoe@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>Doe</td>
+                <td>20</td>
+                <td>johndoe@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>Doe</td>
+                <td>20</td>
+                <td>johndoe@gmail.com</td>
+            </tr>
         </table>
     </div>
 
+    <div id="showForm">
+        <h1 class="stdhead">Studant Details</h1>
+        <form action="" class="std">
+                <label for="">FirstName&nbsp;:</label>
+                <input type="text" name="fname" id="fname" class="form-control" placeholder="Enter name" value=""><br>
+                
+                <label for="">LastName&nbsp;:</label>
+                <input type="text" name="lname" id="lname" class="form-control" placeholder="Enter LastName" value=""><br>
+                
+                <br><label for="">Gender&nbsp;:</label>
+                <input type="radio" name="gender" id="male" value="male" class="radiobtn" checked>Male
+                <input type="radio" name="gender" id="female" value="Female" class="radiobtn">Female <br>
+
+                <label for="">Mobile No&nbsp;:</label>
+                <input type="text" name="number" class="form-control" id="number" placeholder="Enter 10 digit mobile no." value=""><br>
+
+                <label for="">Email&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Ex:abc@gmail.com" value=""><br>
+
+                <button type="submit" class="submitbtn btn">Submit</button>
+        </form>
+
+        <table class="stdtbl" id="stdDetail">
+            <thead>
+                <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Gender</th>
+                <th>Mobile No.</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <script src="script.js"></script>
 </body>
 
