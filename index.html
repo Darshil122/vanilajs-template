@@ -127,24 +127,25 @@
 
     <div id="showForm">
         <h1 class="stdhead">Studant Details</h1>
-        <form action="" class="std">
+        <form action="" class="std" onsubmit="onFormSubmit()">
                 <label for="">FirstName&nbsp;:</label>
-                <input type="text" name="fname" id="fname" class="form-control" placeholder="Enter name" value=""><br>
+                <input type="text" name="FirstName" id="fname" class="form-control" placeholder="Enter name" value=""><br>
                 
                 <label for="">LastName&nbsp;:</label>
-                <input type="text" name="lname" id="lname" class="form-control" placeholder="Enter LastName" value=""><br>
+                <input type="text" name="LastName" id="lname" class="form-control" placeholder="Enter LastName" value=""><br>
                 
                 <br><label for="">Gender&nbsp;:</label>
-                <input type="radio" name="gender" id="male" value="male" class="radiobtn" checked>Male
-                <input type="radio" name="gender" id="female" value="Female" class="radiobtn">Female <br>
+                <input type="radio" name="gender" id="gender" value="Male" class="radiobtn" checked>Male
+                <input type="radio" name="gender" id="gender" value="Female" class="radiobtn">Female <br>
 
-                <label for="">Mobile No&nbsp;:</label>
-                <input type="text" name="number" class="form-control" id="number" placeholder="Enter 10 digit mobile no." value=""><br>
+                <label for="">Mobile&nbsp;:</label>  
+                <input type="text" name="Mobile No" class="form-control" id="number" placeholder="Enter 10 digit mobile no." value=""><br>
 
-                <label for="">Email&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Ex:abc@gmail.com" value=""><br>
+                <label for="">Email&nbsp;&nbsp;:</label>
+                <input type="email" name="Email" class="form-control" id="email" placeholder="Ex:abc@gmail.com" value=""><br>
 
-                <button type="submit" class="submitbtn btn">Submit</button>
+                <button type="submit" class="submitbtn btn" value="submit">Submit</button>
+
         </form>
 
         <table class="stdtbl" id="stdDetail">
@@ -153,18 +154,13 @@
                 <th>FirstName</th>
                 <th>LastName</th>
                 <th>Gender</th>
-                <th>Mobile No.</th>
+                <th>Mobile</th>
                 <th>Email</th>
+                <th>Events</th>
             </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
             </tbody>
         </table>
     </div>

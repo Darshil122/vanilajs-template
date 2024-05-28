@@ -182,23 +182,30 @@ function onFormSubmit(){
     if(selectedrow === null){
         insertNewRecord(formData);
     }else{
-
+            updateRecord(formData);
     }
+    resetForm();
 }
 
 function readFormData(){
     let formData = {};
     formData["fname"] = document.getElementById("fname").value;
     formData["lname"] = document.getElementById("lname").value;
-    formData["male"] = document.getElementById("male").value;
-    formData["female"] = document.getElementById("female").value;
+
+    let radioButtons = document.getElementsByName("gender");
+    for (let i = 0; i < radioButtons.length; i++) {
+        if (radioButtons[i].checked) {
+            formData["gender"] = radioButtons[i].value;
+            break;
+        }
+    }
     formData["number"] = document.getElementById("number").value;
     formData["email"] = document.getElementById("email").value;
     return formData;
 }
 
 function insertNewRecord(data){
-    let table = document.getElementById("stdDetail").getElementsByTagName('td')[0];
+    let table = document.getElementById("stdDetail").getElementsByTagName('tbody')[0];
     let newRow = table.insertRow(table.length);
 
     let row1 = newRow.insertCell(0);
@@ -206,14 +213,46 @@ function insertNewRecord(data){
     let row2 = newRow.insertCell(1);
         row2.innerHTML = data.lname;
     let row3 = newRow.insertCell(2);
-        row3.innerHTML = data.male;
+        row3.innerHTML = data.gender;
     let row4 = newRow.insertCell(3);
-        row4.innerHTML = data.female;
+        row4.innerHTML = data.number;
     let row5 = newRow.insertCell(4);
-        row5.innerHTML = data.number;
+        row5.innerHTML = data.email;
     let row6 = newRow.insertCell(5);
-        row6.innerHTML = data.email;
-    // let row7 = newRow.insertCell(6);
-    //     row7.innerHTML = '<button>Edit</button> <button>Delete</button>';
+        row6.innerHTML = '<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>';
+}
+
+function onEdit(td){
+    selectedrow = td.parentElement.parentElement;
+    document.getElementById("fname").value = selectedrow.cells[0].innerHTML;
+    document.getElementById("lname").value = selectedrow.cells[1].innerHTML;
+    radioButtons[i].value = selectedrow.cells[2].innerHTML;
+    document.getElementById("number").value = selectedrow.cells[3].innerHTML;
+    document.getElementById("email").value = selectedrow.cells[4].innerHTML;
+}
+
+function updateRecord(formData){
+    selectedrow.cells[0].innerHTML = formData.fname;
+    selectedrow.cells[1].innerHTML = formData.lname;
+    selectedrow.cells[2].innerHTML = formData.gender;
+    selectedrow.cells[3].innerHTML = formData.number;
+    selectedrow.cells[4].innerHTML = formData.email;
+
+}
+
+function onDelete(td){
+    if(confirm("Do You Want to delete this record?")){
+        row = td.parentElement.parentElement;
+        document.getElementById("stdDetail").deleteRow(row.rowIndex);
+    }
+    resetForm();
+}
+
+function resetForm(){
+    document.getElementById("fname").value = "";
+    document.getElementById("lname").value = "";
+    document.getElementsByName("gender").value = "";
+    document.getElementById("number").value = "";
+    document.getElementById("email").value = "";
 
 }
